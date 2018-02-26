@@ -6,7 +6,7 @@ import React from 'react' ;
 
 const Home = () => {
     return (
-        <div>
+        <div id="eiway_content">
             <h3>Welcome</h3>
             <p> Home Page</p>
         </div>

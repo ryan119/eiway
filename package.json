@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "npm-run-all --parallel dev:*",
+    "clean": "rimraf build && rimraf public",
     "dev:server": "nodemon --watch build --exec \"node build/bundle.js\"",
     "dev:build-server": "webpack --config webpack.server.js --watch",
     "dev:build-client": "webpack --config webpack.client.js --watch"
@@ -47,5 +48,8 @@
     "image-webpack-loader": "^3.4.2",
     "style-loader": "^0.19.1",
     "url-loader": "^0.6.2"
+  },
+  "devDependencies": {
+    "rimraf": "^2.6.2"
   }
 }

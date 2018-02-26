@@ -22,9 +22,10 @@ app.use('/api', proxy('http://localhost', {
 app.use(express.static('public'));
 app.get('*', (req, res) => {
     const store = createStore(req) ;
-    console.log(Routes);
+    //console.log(Routes);
+    console.log("path: ",req.path);
     const promises = matchRoutes(Routes, req.path).map(({ route }) =>{
-        console.log('route : ' , route);
+        //console.log('route : ' , route);
         return route.loadData ? route.loadData(store) : null ;
     }).map( promise => {
         if(promise) {
