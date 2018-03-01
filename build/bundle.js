@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 7);
+/******/ 	return __webpack_require__(__webpack_require__.s = 9);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -89,6 +89,12 @@ module.exports = require("react-redux");
 
 /***/ }),
 /* 4 */
+/***/ (function(module, exports) {
+
+module.exports = require("styled-components");
+
+/***/ }),
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -103,55 +109,55 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
                                                                                                                                                                                                                                                                    */
 
 
-var _App = __webpack_require__(11);
+var _App = __webpack_require__(13);
 
 var _App2 = _interopRequireDefault(_App);
 
-var _HomePage = __webpack_require__(16);
+var _HomePage = __webpack_require__(19);
 
 var _HomePage2 = _interopRequireDefault(_HomePage);
 
-var _products = __webpack_require__(17);
+var _products = __webpack_require__(20);
 
 var _products2 = _interopRequireDefault(_products);
 
-var _news = __webpack_require__(18);
+var _news = __webpack_require__(21);
 
 var _news2 = _interopRequireDefault(_news);
 
-var _about = __webpack_require__(19);
+var _about = __webpack_require__(22);
 
 var _about2 = _interopRequireDefault(_about);
 
-var _contact = __webpack_require__(20);
+var _contact = __webpack_require__(23);
 
 var _contact2 = _interopRequireDefault(_contact);
 
-var _search = __webpack_require__(21);
+var _search = __webpack_require__(24);
 
 var _search2 = _interopRequireDefault(_search);
 
-var _Product = __webpack_require__(22);
+var _Product = __webpack_require__(25);
 
 var _Product2 = _interopRequireDefault(_Product);
 
-var _Item = __webpack_require__(23);
+var _Item = __webpack_require__(26);
 
 var _Item2 = _interopRequireDefault(_Item);
 
-var _user = __webpack_require__(24);
+var _user = __webpack_require__(27);
 
 var _user2 = _interopRequireDefault(_user);
 
-var _Login = __webpack_require__(25);
+var _Login = __webpack_require__(28);
 
 var _Login2 = _interopRequireDefault(_Login);
 
-var _Register = __webpack_require__(26);
+var _Register = __webpack_require__(29);
 
 var _Register2 = _interopRequireDefault(_Register);
 
-var _NotFoundPage = __webpack_require__(27);
+var _NotFoundPage = __webpack_require__(30);
 
 var _NotFoundPage2 = _interopRequireDefault(_NotFoundPage);
 
@@ -187,7 +193,7 @@ exports.default = [_extends({}, _App2.default, {
 })];
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -202,39 +208,83 @@ Object.defineProperty(exports, "__esModule", {
 var FETCH_CURRENT_USER = exports.FETCH_CURRENT_USER = "fetch_current_user";
 
 /***/ }),
-/* 6 */
-/***/ (function(module, exports) {
-
-module.exports = require("redux");
-
-/***/ }),
 /* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(8);
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+/**
+ * Created by ryan on 2018/2/27.
+ */
+exports.default = {
+    colors: {
+        primary: '#BD4932',
+        secondary: '#DB9E36',
+        grayLight: '#E5E5E5',
+        grayDark: '#333',
+        danger: '#E0320f',
+        success: '#9BD347',
+        blue: '#22d3c5',
+        blue2: '#28ecdc',
+        green: '#8bdc65',
+        green2: '#9bf671',
+        gray: '#a5bbc2',
+        gray2: '#7e969b',
+        red: '#ff8188',
+        red2: '#ff8188',
+        yellow: '#e1e61e'
+    },
+    fontFamilies: {
+        primary: "'Roboto', sans-serif"
+    },
+    medias: {
+        phablet: '850px',
+        desktop: '992px',
+        xl: '1440px',
+        maxW: '1000px',
+        mobile: '800px'
+    }
 
-var _express = __webpack_require__(9);
+};
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports) {
+
+module.exports = require("redux");
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(10);
+
+var _express = __webpack_require__(11);
 
 var _express2 = _interopRequireDefault(_express);
 
 var _reactRouterConfig = __webpack_require__(2);
 
-var _expressHttpProxy = __webpack_require__(10);
+var _expressHttpProxy = __webpack_require__(12);
 
 var _expressHttpProxy2 = _interopRequireDefault(_expressHttpProxy);
 
-var _Routes = __webpack_require__(4);
+var _Routes = __webpack_require__(5);
 
 var _Routes2 = _interopRequireDefault(_Routes);
 
-var _renderer = __webpack_require__(28);
+var _renderer = __webpack_require__(31);
 
 var _renderer2 = _interopRequireDefault(_renderer);
 
-var _createStore = __webpack_require__(32);
+var _createStore = __webpack_require__(35);
 
 var _createStore2 = _interopRequireDefault(_createStore);
 
@@ -291,25 +341,25 @@ app.listen(3000, function () {
 });
 
 /***/ }),
-/* 8 */
+/* 10 */
 /***/ (function(module, exports) {
 
 module.exports = require("babel-polyfill");
 
 /***/ }),
-/* 9 */
+/* 11 */
 /***/ (function(module, exports) {
 
 module.exports = require("express");
 
 /***/ }),
-/* 10 */
+/* 12 */
 /***/ (function(module, exports) {
 
 module.exports = require("express-http-proxy");
 
 /***/ }),
-/* 11 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -319,35 +369,56 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
+var _templateObject = _taggedTemplateLiteral(['\n     /* \u8A2D\u5B9A\u9AD8\u5EA6\u6700\u5C0F\u70BA100%, \u5982\u679C\u5167\u5BB9\u5340\u584A\u5F88\u591A, \u53EF\u4EE5\u9577\u5927 */\n    min-height: 100%;\n    /* \u4F4D\u7F6E\u8A2D\u70BArelative, \u4F5C\u70BAfooter\u5340\u584A\u4F4D\u7F6E\u7684\u53C3\u8003 */\n    position: relative;\n    \n    \n    /* Now we have our methods on media and can use them instead of raw queries */\n    ', '\n    ', '\n    ', '\n'], ['\n     /* \u8A2D\u5B9A\u9AD8\u5EA6\u6700\u5C0F\u70BA100%, \u5982\u679C\u5167\u5BB9\u5340\u584A\u5F88\u591A, \u53EF\u4EE5\u9577\u5927 */\n    min-height: 100%;\n    /* \u4F4D\u7F6E\u8A2D\u70BArelative, \u4F5C\u70BAfooter\u5340\u584A\u4F4D\u7F6E\u7684\u53C3\u8003 */\n    position: relative;\n    \n    \n    /* Now we have our methods on media and can use them instead of raw queries */\n    ', '\n    ', '\n    ', '\n']),
+    _templateObject2 = _taggedTemplateLiteral(['background: ', ';'], ['background: ', ';']),
+    _templateObject3 = _taggedTemplateLiteral(['background: mediumseagreen;'], ['background: mediumseagreen;']),
+    _templateObject4 = _taggedTemplateLiteral(['background: palevioletred;'], ['background: palevioletred;']);
+
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterConfig = __webpack_require__(2);
 
-var _action = __webpack_require__(12);
+var _action = __webpack_require__(14);
 
-var _Header = __webpack_require__(13);
+var _Header = __webpack_require__(15);
 
 var _Header2 = _interopRequireDefault(_Header);
 
-var _Footer = __webpack_require__(14);
+var _Footer = __webpack_require__(16);
 
 var _Footer2 = _interopRequireDefault(_Footer);
 
-__webpack_require__(15);
+__webpack_require__(17);
+
+var _styledComponents = __webpack_require__(4);
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+var _media = __webpack_require__(18);
+
+var _media2 = _interopRequireDefault(_media);
+
+var _theme = __webpack_require__(7);
+
+var _theme2 = _interopRequireDefault(_theme);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/**
- * Created by ryan on 2018/2/21.
- */
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); } /**
+                                                                                                                                                   * Created by ryan on 2018/2/21.
+                                                                                                                                                   */
+
+
+var Content = _styledComponents2.default.div(_templateObject, _media2.default.desktop(_templateObject2, _theme2.default.colors.blue), _media2.default.phablet(_templateObject3), _media2.default.mobile(_templateObject4));
+
 var App = function App(_ref) {
     var route = _ref.route;
 
     return _react2.default.createElement(
-        'div',
-        { id: 'eiway_wrapper' },
+        Content,
+        null,
         _react2.default.createElement(_Header2.default, null),
         (0, _reactRouterConfig.renderRoutes)(route.routes),
         _react2.default.createElement(_Footer2.default, null)
@@ -363,7 +434,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 12 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -374,7 +445,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.fetchCurrentUser = undefined;
 
-var _actionTypes = __webpack_require__(5);
+var _actionTypes = __webpack_require__(6);
 
 function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; } /**
                                                                                                                                                                                                                                                                                                                                                                                                                                                                             * Created by ryan on 2018/2/21.
@@ -416,7 +487,7 @@ var fetchCurrentUser = exports.fetchCurrentUser = function fetchCurrentUser() {
 };
 
 /***/ }),
-/* 13 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -525,7 +596,7 @@ function mapStateToProps(_ref2) {
 exports.default = (0, _reactRedux.connect)(mapStateToProps, null)(Header);
 
 /***/ }),
-/* 14 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -562,13 +633,50 @@ var Footer = function Footer() {
 exports.default = Footer;
 
 /***/ }),
-/* 15 */
+/* 17 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 16 */
+/* 18 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _templateObject = _taggedTemplateLiteral(['\n        @media (max-width : ', ') {\n            ', '\n        }\n    '], ['\n        @media (max-width : ', ') {\n            ', '\n        }\n    ']);
+
+var _styledComponents = __webpack_require__(4);
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+var _theme = __webpack_require__(7);
+
+var _theme2 = _interopRequireDefault(_theme);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); } /**
+                                                                                                                                                   * Created by ryan on 2018/2/27.
+                                                                                                                                                   */
+
+
+var media = Object.keys(_theme2.default.medias).reduce(function (acc, label) {
+    acc[label] = function () {
+        return (0, _styledComponents.css)(_templateObject, _theme2.default.medias[label], _styledComponents.css.apply(undefined, arguments));
+    };
+    return acc;
+}, {});
+
+exports.default = media;
+
+/***/ }),
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -608,7 +716,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 17 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -663,7 +771,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 18 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -718,7 +826,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 19 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -773,7 +881,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 20 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -828,7 +936,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 21 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -864,7 +972,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 22 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -937,7 +1045,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 23 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -999,7 +1107,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 24 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1054,7 +1162,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 25 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1124,7 +1232,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 26 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1179,7 +1287,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 27 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1217,7 +1325,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 28 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1231,7 +1339,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _server = __webpack_require__(29);
+var _server = __webpack_require__(32);
 
 var _reactRouterDom = __webpack_require__(1);
 
@@ -1239,61 +1347,68 @@ var _reactRedux = __webpack_require__(3);
 
 var _reactRouterConfig = __webpack_require__(2);
 
-var _serializeJavascript = __webpack_require__(30);
+var _serializeJavascript = __webpack_require__(33);
 
 var _serializeJavascript2 = _interopRequireDefault(_serializeJavascript);
 
-var _reactHelmet = __webpack_require__(31);
+var _reactHelmet = __webpack_require__(34);
 
-var _Routes = __webpack_require__(4);
+var _styledComponents = __webpack_require__(4);
+
+var _Routes = __webpack_require__(5);
 
 var _Routes2 = _interopRequireDefault(_Routes);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/**
- * Created by ryan on 2018/2/5.
- */
 exports.default = function (req, store, context) {
+    var sheet = new _styledComponents.ServerStyleSheet();
     var content = (0, _server.renderToString)(_react2.default.createElement(
-        _reactRedux.Provider,
-        { store: store },
+        _styledComponents.StyleSheetManager,
+        { sheet: sheet.instance },
         _react2.default.createElement(
-            _reactRouterDom.StaticRouter,
-            { location: req.path, context: context },
+            _reactRedux.Provider,
+            { store: store },
             _react2.default.createElement(
-                'div',
-                null,
-                (0, _reactRouterConfig.renderRoutes)(_Routes2.default)
+                _reactRouterDom.StaticRouter,
+                { location: req.path, context: context },
+                _react2.default.createElement(
+                    'div',
+                    null,
+                    (0, _reactRouterConfig.renderRoutes)(_Routes2.default)
+                )
             )
         )
     ));
 
+    var styleTags = sheet.getStyleTags();
     var helmet = _reactHelmet.Helmet.renderStatic();
 
-    return '\n        <html>\n            <head>\n                ' + helmet.title.toString() + '\n                ' + helmet.meta.toString() + '\n                 <link rel="stylesheet" href="/style.css">\n            </head>\n            <body>\n                <div id="root">' + content + '</div>\n                <script>\n                    window.INITIAL_STATE = ' + (0, _serializeJavascript2.default)(store.getState()) + '\n                </script>\n                <script src="/bundle.js"></script>\n            </body>\n        </html>\n    ';
-};
+    return '\n        <html>\n            <head>\n                ' + helmet.title.toString() + '\n                ' + helmet.meta.toString() + '\n                ' + styleTags + '\n                 <link rel="stylesheet" href="/style.css">\n            </head>\n            <body>\n                <div id="root">' + content + '</div>\n                <script>\n                    window.INITIAL_STATE = ' + (0, _serializeJavascript2.default)(store.getState()) + '\n                </script>\n                <script src="/bundle.js"></script>\n            </body>\n        </html>\n    ';
+}; /**
+    * Created by ryan on 2018/2/5.
+    */
 
 /***/ }),
-/* 29 */
+/* 32 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-dom/server");
 
 /***/ }),
-/* 30 */
+/* 33 */
 /***/ (function(module, exports) {
 
 module.exports = require("serialize-javascript");
 
 /***/ }),
-/* 31 */
+/* 34 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-helmet");
 
 /***/ }),
-/* 32 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1303,17 +1418,17 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _redux = __webpack_require__(6);
+var _redux = __webpack_require__(8);
 
-var _reduxThunk = __webpack_require__(33);
+var _reduxThunk = __webpack_require__(36);
 
 var _reduxThunk2 = _interopRequireDefault(_reduxThunk);
 
-var _axios = __webpack_require__(34);
+var _axios = __webpack_require__(37);
 
 var _axios2 = _interopRequireDefault(_axios);
 
-var _reducers = __webpack_require__(35);
+var _reducers = __webpack_require__(38);
 
 var _reducers2 = _interopRequireDefault(_reducers);
 
@@ -1333,19 +1448,19 @@ exports.default = function (req) {
 };
 
 /***/ }),
-/* 33 */
+/* 36 */
 /***/ (function(module, exports) {
 
 module.exports = require("redux-thunk");
 
 /***/ }),
-/* 34 */
+/* 37 */
 /***/ (function(module, exports) {
 
 module.exports = require("axios");
 
 /***/ }),
-/* 35 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1355,9 +1470,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _redux = __webpack_require__(6);
+var _redux = __webpack_require__(8);
 
-var _authReducer = __webpack_require__(36);
+var _authReducer = __webpack_require__(39);
 
 var _authReducer2 = _interopRequireDefault(_authReducer);
 
@@ -1372,7 +1487,7 @@ exports.default = (0, _redux.combineReducers)({
 });
 
 /***/ }),
-/* 36 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1394,7 +1509,7 @@ exports.default = function () {
     }
 };
 
-var _actionTypes = __webpack_require__(5);
+var _actionTypes = __webpack_require__(6);
 
 /***/ })
 /******/ ]);
