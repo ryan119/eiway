@@ -4,13 +4,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import eiway_logo from '../../assets/images/eiway_logo.png';
+
 
 const Header = ({ auth }) => {
 
     return (
             <div id="eiway_header">
                 <ul>
-                    <li><Link to="/"> EI-WAY Logo</Link></li>
+                    <li><Link to="/"><img src={eiway_logo}/></Link></li>
                     <li><Link to="/products">產品介紹</Link></li>
                     <li><Link to="/news">最新消息</Link></li>
                     <li><Link to="/about">關於我們</Link></li>

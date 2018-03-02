@@ -1,4 +1,5 @@
 
+const env = process.env.NODE_ENV;
 const ExtractTextPlugin = require('extract-text-webpack-plugin') ;
 
 module.exports = {
@@ -18,24 +19,35 @@ module.exports = {
                 }
             },
             {
-                loader: ExtractTextPlugin.extract({
-                    loader: 'css-loader'
-                }),
-                test: /\.css$/
+                test: /\.css$/,
+                use: env ==='production'
+                ? ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: ['css-loader']
+                })
+                : ['style-loader', 'css-loader']
             },
             {
                 test: /\.(jpe?g|png|gif|svg)$/,
                 use: [
                     {
                         loader: 'url-loader',
-                        options: { limit : 40000 }
+                        options: {
+                            limit : 4000 ,
+                            name: 'images/[hash]-[name].[ext]'}
                     },
-                    'image-webpack-loader'
+                    'image-webpack-loader',
                 ]
             }
         ]
     },
-    plugins: [
-        new ExtractTextPlugin('style.css')
-    ]
+    plugins: env === 'production'
+        ? [
+            new ExtractTextPlugin({
+                filename: "css/[name].[hash].css",
+                disable: false,
+                allChunks: true
+            })
+          ]
+        :[]
 }

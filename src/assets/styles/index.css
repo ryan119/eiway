@@ -34,3 +34,7 @@ html, body {
     /* 展開footer寬度 */
     width: 100%;
 }
+
+#imgTree {
+    background-image: url('../../assets/images/img_tree.gif');
+}

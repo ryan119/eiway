@@ -6,9 +6,9 @@
   "scripts": {
     "dev": "npm-run-all --parallel dev:*",
     "clean": "rimraf build && rimraf public",
-    "dev:server": "nodemon --watch build --exec \"node build/bundle.js\"",
-    "dev:build-server": "webpack --config webpack.server.js --watch",
-    "dev:build-client": "webpack --config webpack.client.js --watch"
+    "dev:build-server": "NODE_ENV=production webpack --config webpack.server.js --watch",
+    "dev:build-client": "NODE_ENV=production webpack --config webpack.client.js --watch",
+    "dev:server": "nodemon --watch build --exec node build/bundle.js"
   },
   "author": "Ryan Chung",
   "license": "ISC",
